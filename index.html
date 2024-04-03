@@ -20,7 +20,14 @@
 
   .section1 {
     text-align: center;
-    padding: 50px 0;
+    width: 100%;
+    /* padding: 30px 0; */
+  }
+  @media screen and (max-width: 768px) {
+  .section1 {
+    /* padding: 20px 0; Adjusted padding for smaller screens */
+    height: 200px;
+  }
   }
 
   .title {
@@ -50,6 +57,32 @@
   .button:hover {
     background-color: #861314;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px; /* Gap between boxes */
+    padding-bottom: 10px;
+  }
+
+  .box {
+    height: 190px; /* Adjust height as needed */
+    background-color: #031F42; /* Blue color */
+    border-radius: 10px;
+    margin: 15px;
+  }
+  .box img {
+    width: 100%; /* Decreased width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+    border-radius: 10px;
+    
+  }
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 column */
+    }
+  }
 </style>
 
   </head>
@@ -76,32 +109,29 @@
 </script>
 </head>
     <body>
-  <div id="navbarContainer"></div>
-  <br> <br> 
-  <img src="Design.png" class="rounded mx-auto d-block" alt="Design Ignite" style = "width: 180px"> <br> <br> <br>  <br> 
-  <section class = "section1">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title">Design Ignite</div>
-          <div class="subtitle">Join us for Design Ignite - where creativity sparks and innovation shines! Experience the excitement on April 18th & 19th at School of Design.</div>
-            <div class="subtitle">Design Ignite is the festival of creativity knows no bounds, where imagination takes flight, and where innovation reigns supreme. An event which speaks, sleeps, eats, dances and paints to the tune of design for getting together to rejoice and recreate Design, Art and creativity. An event to express our emotions – a gesture of gratitude towards nature and sustainable approach to our beautiful universe</div>
-          <a href="events.html" class="button">Explore More</a>
+      <div id="navbarContainer"></div>
+
+      <!-- <img src="Design.png" class="rounded mx-auto d-block" alt="Design Ignite" style = "width: 180px"> <br> <br> <br>  <br>  -->
+      <section class = "section1">
+        <div class="overflow-x-hidden">
+          <img src="home.png" style="width: 100%; height: auto;"> 
         </div>
+      </section>
+      <section>
+        <div class = "container text-center">
+        <p class = "subtitle" style = "color:#A21C20; font-size: 30px; text-align:center; padding: 30px"> DESIGN IGNITE <span style = "color:black"> is a design festival of Manav Rachna and will be celebrated on April 18th and 19th. </span> </p> </div>
+        <br> 
+        <img src="home_pic-8.png" class="rounded mx-auto d-block" alt="Design Ignite" style = "width: 300px;"> <br> <br>
+        <p class = "subtitle" style = "font-size: 30px; text-align:center; padding: 00px"> Dr O. P. Bhalla Founder Visionary </p> 
+        <p class = "subtitle" style = "font-size: 30px; text-align:center; padding: 00px"> Manav Rachna (1947 - 2013) </p> </div>
+
+      </section>  
+      <div class="grid-container">
+        <div class="box"><img src="grid images/1.png" alt="Image 1"></div>
+        <div class="box"><img src="grid images/2.png" alt="Image 2"></div>
+        <div class="box"><img src="grid images/3.png" alt="Image 3"></div>
+        <div class="box"><img src="grid images/4.png" alt="Image 4"></div>
       </div>
-    </div>
-  </section>
-  <br> <br> <br>  <br> 
-  <section>
-    <div class = "container text-center">
-    <p class = "subtitle" style = "color:#A21C20; font-size: 30px; text-align:center; padding: 30px"> DESIGN IGNITE <span style = "color:black"> is a design festival of Manav Rachna and will be celebrated on April 18th and 19th. </span> </p> </div>
-    <br> 
-    <img src="home_pic-8.png" class="rounded mx-auto d-block" alt="Design Ignite" style = "width: 300px"> <br> <br>
-    <p class = "subtitle" style = "font-size: 30px; text-align:center; padding: 00px"> Dr O. P. Bhalla Founder Visionary </p> 
-    <p class = "subtitle" style = "font-size: 30px; text-align:center; padding: 00px"> Manav Rachna (1947 - 2013) </p> </div>
-    <br> 
-    
-  </section>  
-  <div id="footerContainer"></div>
-  </body>
+      <div id="footerContainer"></div>
+    </body>
 </html>
